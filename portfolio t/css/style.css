@@ -1,0 +1,306 @@
+/* main style */
+* {
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
+
+body{
+    color: #2d3c49;
+}
+/* main style */
+
+/* start header */
+header {
+    height: 70px;
+    overflow: hidden;
+    border-bottom: 3px solid #02b3e4;
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+header .logo {
+    float: left;
+    width: 70%;
+    order: 1;
+}
+header .logo h3 {
+    display: inline;
+    font-size: 40px;
+    padding-left: 50px;
+    font-family: 'Oswald', sans-serif;
+}
+header .logo .name-color {
+    color: #02b3e4;
+}
+header .logo img{
+    max-width: 40px;
+    position: absolute;
+    top: 2px;
+    left: 0;
+}
+header .about {
+    float: right;
+    padding-left: 30px;
+    letter-spacing: 1.8px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    width: 30%;
+    text-align: center;
+    order: 2;
+}
+/* end header */
+
+/* start intro image */
+.intro{
+    padding-top: 30px;
+}
+.intro img{
+    max-width: 100%;
+    -wepkit-clip-path: polygon(50% 0%, 100% 0, 100% 74%, 50% 100%, 0 74%, 0 0);
+    -moz-clip-path: polygon(50% 0%, 100% 0, 100% 74%, 50% 100%, 0 74%, 0 0);
+    -o-clip-path: polygon(50% 0%, 100% 0, 100% 74%, 50% 100%, 0 74%, 0 0);
+    clip-path: polygon(50% 0%, 100% 0, 100% 74%, 50% 100%, 0 74%, 0 0);
+    opacity: 0.3;
+    z-index: 2;
+}
+.overlay {
+    background-color: #02b3e4;
+    -wepkit-clip-path: polygon(50% 0%, 100% 0, 100% 69%, 50% 93%, 0 69%, 0 0);
+    -moz-clip-path: polygon(50% 0%, 100% 0, 100% 69%, 50% 93%, 0 69%, 0 0);
+    -o-clip-path: polygon(50% 0%, 100% 0, 100% 69%, 50% 93%, 0 69%, 0 0);
+    clip-path: polygon(50% 0%, 100% 0, 100% 69%, 50% 93%, 0 69%, 0 0);
+    opacity: 0.9
+}
+.intro hr {
+    height: 3px;
+    background-color: #02b3e4;
+    margin: 0;
+}
+/* end intro image */
+
+/* start projects */
+.projects {
+    padding-top: 30px;
+    background-color: #bac3ccb0;
+    width: 100%;
+}
+.projects h4 {
+    padding-left: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    position: relative;
+}
+.projects h4::before{
+    content: "";
+    width: 65px;
+    height: 2px;
+    background-color: #2d3c49;
+    position: absolute;
+    top: 23px;
+    left: 15px;
+}
+.projects h4::after{
+    content: "";
+    width: 65px;
+    height: 2px;
+    background-color: #2d3c49;
+    position: absolute;
+    top: -4px;
+    left: 80px;
+}
+.projects .pro-image {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+}
+.projects figure {
+    display: inline-block;
+    margin: 20px;
+    
+}
+.projects .pro-image figure img {
+    max-width: 100%;
+    -webkit-transition: 0.4s all ease-in-out;
+    -moz-transition: 0.4s all ease-in-out;
+    -o-transition: 0.4s all ease-in-out;
+    transition: 0.4s all ease-in-out;
+    cursor: pointer;
+}
+.projects .pro-image figure img:hover {
+    opacity: 0.5;
+}
+.projects .pro-image .pro-3 {
+    margin-right: 0;
+}
+.projects .pro-image figure figcaption{
+   text-align: center;
+}
+.projects .pro-image figure h3{
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-align: center
+}
+.projects .pro-image figure figcaption a {
+    text-decoration: none;
+    color: #2d3c49;
+    font-size: 18px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+}
+.projects hr {
+    height: 3px;
+    background-color: #02b3e4;
+    margin-bottom: 0;
+}
+.image-overlay {
+    background-color: #02b3e4;
+    max-width: 100%;
+    transform: translate(10px, 0);
+    z-index: 555;
+}
+/* end projects */
+
+/* start footer */
+footer {
+    background-color: #2d3c49;
+    text-align: center;
+    height: 45px;
+}
+.copy p {
+    margin: 0;
+    color: #fff;
+    padding-top: 15px;
+    text-transform: uppercase;
+}
+/* start footer */
+
+/* ---------- media ---------- */
+
+@media screen and (max-width: 513px){
+    
+    /*start header*/
+    header{
+        height: 150px;
+        flex-wrap: wrap;
+    }
+    header .logo {
+        width: 100%;
+        order: 1;
+        text-align: center;
+    }
+    header .logo h3 {
+        font-size: 35px;
+        padding-left: 0;
+    }
+    header .logo img {
+        left: 44%;
+        top: 40px;
+    }
+    header .about {
+        width: 100%;
+        order: 2;
+        padding-left: 0;
+    }
+    /*end header*/
+    
+    /*start intro-image*/
+    .intro .info {
+    top: 15%;
+    left: 5%;
+    }
+    /*end intro-image*/
+    
+    /*start projects*/
+    .projects h4 {
+        text-align: center;
+    }
+    .projects h4::after {
+    content: "";
+    width: 65px;
+    height: 2px;
+    background-color: #2d3c49;
+    position: absolute;
+    top: -4px;
+    left: 55%;
+    }
+    .projects h4::before {
+    content: "";
+    width: 65px;
+    height: 2px;
+    background-color: #2d3c49;
+    position: absolute;
+    top: 23px;
+    left: 33%;
+    }
+    .projects .pro-image {
+        margin-left: auto;
+        width: 100%;
+        padding: 0 10% 0;
+    }
+    .projects .pro-image .pro-3 {
+    margin-right: 20px
+    }
+    /*end projects*/
+    
+    /*start footer*/
+    .copy p {
+        padding-top: 15px;
+    }
+    /*end footer*/
+}
+
+@media screen and (min-width: 514px) and (max-width: 1024px) {
+   
+    .projects h4 {
+        text-align: center;
+    }
+    .projects h4::after {
+    content: "";
+    width: 65px;
+    height: 2px;
+    background-color: #2d3c49;
+    position: absolute;
+    top: -4px;
+    left: 52%;
+    }
+    .projects h4::before {
+    content: "";
+    width: 65px;
+    height: 2px;
+    background-color: #2d3c49;
+    position: absolute;
+    top: 23px;
+    left: 42%;
+    }
+    .projects figure{
+        padding: inherit;
+    }
+    .projects .pro-image {
+        margin-left: auto;
+        width: 100%;
+        padding: 0 10% 0;
+    }
+    .projects .pro-image {
+        margin-left: auto;
+        width: 100%;
+        padding: 0 20% 0;
+    }
+    .projects .pro-image .pro1 {
+        order: 1;
+    }
+    .projects .pro-image .pro2 {
+        order: 2;
+    }
+    .projects .pro-image .pro3 {
+        order: 3;
+    }
+    
+    /*start footer*/
+    .copy p {
+        padding-top: 15px;
+    }
+    /*end footer*/
+}
